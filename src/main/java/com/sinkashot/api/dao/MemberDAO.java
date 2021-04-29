@@ -9,4 +9,5 @@ import com.sinkashot.api.dto.Member;
 @Repository
 public interface MemberDAO {
 	List<Member> selectMembers();
+	Member findByMemberWithNumber(int number);
 }

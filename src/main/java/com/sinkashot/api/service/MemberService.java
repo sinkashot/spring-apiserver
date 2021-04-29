@@ -6,4 +6,5 @@ import com.sinkashot.api.dto.Member;
 
 public interface MemberService {
 	List<Member> selectMembers();
+	Member findByMemberWithNumber(int number);
 }

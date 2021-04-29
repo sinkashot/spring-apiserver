@@ -5,4 +5,8 @@
 	<select id="selectMembers" resultType="com.sinkashot.api.dto.Member">
 		SELECT * FROM member
 	</select>
+	
+	<select id="findByMemberWithNumber" parameterType="int" resultType="com.sinkashot.api.dto.Member">
+		SELECT * FROM member WHERE number = #{number}
+	</select>
 </mapper>

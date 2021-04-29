@@ -1,12 +1,21 @@
 package com.sinkashot.api.dto;
 
 public class Member {
+	private int number;
 	private String id;
 	private String name;
 	private String pwd;
 	
 	public Member() {
 		// TODO Auto-generated constructor stub
+	}
+	
+	public int getNumber() {
+		return number;
+	}
+	
+	public void setNumber(int number) {
+		this.number = number;
 	}
 	
 	public String getId() {

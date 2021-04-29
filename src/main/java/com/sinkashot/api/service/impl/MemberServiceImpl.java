@@ -27,4 +27,9 @@ public class MemberServiceImpl implements MemberService{
 		
 		return memberDao.selectMembers();
 	}
+	
+	@Override
+	public Member findByMemberWithNumber(int number) {
+		return memberDao.findByMemberWithNumber(number);
+	}
 }
