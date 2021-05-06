@@ -9,4 +9,10 @@
 	<select id="findByMemberWithNumber" parameterType="int" resultType="com.sinkashot.api.dto.Member">
 		SELECT * FROM member WHERE number = #{number}
 	</select>
+	
+	<select id="findByMemberForAuth" parameterType="java.util.Map" resultType="com.sinkashot.api.dto.Member">
+		SELECT number, id, name 
+		FROM member 
+		WHERE id = #{id} AND pwd = #{pwd}
+	</select>
 </mapper>

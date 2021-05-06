@@ -1,6 +1,7 @@
 package com.sinkashot.api.service.impl;
 
 import java.util.List;
+import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,5 +32,10 @@ public class MemberServiceImpl implements MemberService{
 	@Override
 	public Member findByMemberWithNumber(int number) {
 		return memberDao.findByMemberWithNumber(number);
+	}
+	
+	@Override
+	public Member findByMemberForAuth(HashMap<String,String> auth) {
+		return memberDao.findByMemberForAuth(auth);
 	}
 }
