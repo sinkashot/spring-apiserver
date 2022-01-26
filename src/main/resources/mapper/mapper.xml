@@ -3,11 +3,17 @@
 
 <mapper namespace="com.sinkashot.api.dao.MemberDAO">
 	<select id="selectMembers" resultType="com.sinkashot.api.dto.Member">
-		SELECT * FROM member
+		SELECT * 
+		FROM member
+		WHERE 1=1
+		AND number > 10 
 	</select>
 	
 	<select id="findByMemberWithNumber" parameterType="int" resultType="com.sinkashot.api.dto.Member">
-		SELECT * FROM member WHERE number = #{number}
+		SELECT * FROM member 
+		WHERE 1=1
+		AND number > 10 
+		AND number = #{number}
 	</select>
 	
 	<select id="findByMemberForAuth" parameterType="java.util.Map" resultType="com.sinkashot.api.dto.Member">
