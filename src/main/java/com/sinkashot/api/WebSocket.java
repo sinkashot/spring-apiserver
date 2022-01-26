@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Component
 @ServerEndpoint("/websocket")
 public class WebSocket {
-	private static ArrayList<Session> sessionList = new ArrayList<Session>();
+	private static final ArrayList<Session> sessionList = new ArrayList<>();
 	
 	@OnOpen
 	public void handleOpen(Session session) {

@@ -13,19 +13,14 @@ import com.sinkashot.api.service.MemberService;
 @Service
 public class MemberServiceImpl implements MemberService{
 	
-	@Autowired
-	private MemberDAO memberDao;
-	
+	private final MemberDAO memberDao;
+
+	public MemberServiceImpl(MemberDAO memberDao) {
+		this.memberDao = memberDao;
+	}
+
 	@Override
 	public List<Member> selectMembers() {
-//		Member member = new Member();
-//		
-//		member.setId("test");
-//		member.setName("테스트");
-//		member.setPwd("4321");
-//		
-//		return member;
-		
 		return memberDao.selectMembers();
 	}
 	
